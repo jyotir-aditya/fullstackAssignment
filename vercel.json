@@ -3,15 +3,10 @@
   "buildCommand": "cd client && npm install && npm run build",
   "outputDirectory": "client/dist",
   "framework": null,
-  "functions": {
-    "server/src/vercel.ts": {
-      "runtime": "@vercel/node@2.0.0"
-    }
-  },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/src/vercel.ts"
+      "dest": "/api"
     },
     {
       "src": "/(.*)",
