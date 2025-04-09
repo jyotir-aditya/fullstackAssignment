@@ -2,9 +2,14 @@ import axios from "axios";
 
 // Determine the appropriate base URL based on environment
 const getBaseUrl = () => {
+  // Use environment variable if provided
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+
   if (import.meta.env.PROD) {
-    // In production, don't use '/api' as baseURL since routes already include it
-    return "";
+    // In Docker/production environment, use relative URL without duplicate /api
+    return "/api";
   }
 
   // For development

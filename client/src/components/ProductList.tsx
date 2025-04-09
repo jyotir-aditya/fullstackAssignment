@@ -42,7 +42,7 @@ const ProductList: React.FC = () => {
         if (minRating) params.minRating = minRating;
 
         // Fetch products using apiClient - no need to manually set auth header
-        const response = await apiClient.get("/api/products", { params });
+        const response = await apiClient.get("/products", { params });
         
         if (response.data && response.data.data) {
           setProducts(response.data.data);
@@ -66,7 +66,7 @@ const ProductList: React.FC = () => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
         // For delete operations, we use apiClient which now handles auth automatically
-        await apiClient.delete(`/api/products/${id}`);
+        await apiClient.delete(`/products/${id}`);
         
         // Remove the product from the state
         setProducts((prevProducts) =>

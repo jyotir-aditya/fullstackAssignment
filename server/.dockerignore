@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build outputs
+dist
+build
+
+# Testing
+coverage
+.nyc_output
+jest-report
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor directories and files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Nest.js specific
+.nestcli.json
+
+# Database files
+*.sqlite
+*.db
+
+# Documentation
+documentation
+docs

@@ -18,12 +18,11 @@ const Signup: React.FC = () => {
     
     try {
       // Register user
-      const signupResponse = await apiClient.post("/api/auth/signup", { email, password });
-      setSuccess(signupResponse.data.message || "User registered successfully!");
+      await apiClient.post("/auth/register", { email, password });
       
       // log in the user after successful signup
       try {
-        const loginResponse = await apiClient.post("/api/auth/login", { email, password });
+        const loginResponse = await apiClient.post("/auth/login", { email, password });
         
         // store auth token and user information
         localStorage.setItem("token", loginResponse.data.access_token);

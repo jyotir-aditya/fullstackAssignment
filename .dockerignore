@@ -1,0 +1,45 @@
+# Node modules and dependencies
+**/node_modules
+**/npm-debug.log
+**/yarn-debug.log
+**/yarn-error.log
+
+# Build artifacts
+**/dist
+**/build
+**/.next
+**/coverage
+
+# Environment variables
+**/.env
+**/.env.local
+**/.env.development
+**/.env.production
+**/.env.test
+
+# Version control
+**/.git
+**/.gitignore
+**/.svn
+**/.hg
+
+# IDE specific files
+**/.idea
+**/.vscode
+**/.DS_Store
+**/thumbs.db
+
+# Project specific
+**/screenshots
+README.md
+**/*.md
+**/LICENSE
+**/*.log
+**/docker-compose.yml
+**/docker-compose.*.yml
+
+# Include only what's needed for the build
+!**/package.json
+!**/package-lock.json
+!**/*.config.js
+!**/*.config.ts
